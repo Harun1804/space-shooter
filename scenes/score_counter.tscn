@@ -1,0 +1,86 @@
+[gd_scene load_steps=11 format=3 uid="uid://bgrrn6qwymfxl"]
+
+[ext_resource type="Script" uid="uid://b4oofgil52tse" path="res://scripts/score_counter.gd" id="1_v1o25"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ep32e"]
+load_path = "res://.godot/imported/Number_font (8 x 8).png-e706f36eadb140398b2a07c1b9215654.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f43bp"]
+atlas = SubResource("CompressedTexture2D_ep32e")
+region = Rect2(32, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kry78"]
+atlas = SubResource("CompressedTexture2D_ep32e")
+region = Rect2(32, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqfp5"]
+atlas = SubResource("CompressedTexture2D_ep32e")
+region = Rect2(32, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qpgf"]
+atlas = SubResource("CompressedTexture2D_ep32e")
+region = Rect2(32, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbwnf"]
+atlas = SubResource("CompressedTexture2D_ep32e")
+region = Rect2(32, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wgod"]
+atlas = SubResource("CompressedTexture2D_ep32e")
+region = Rect2(32, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_quku1"]
+atlas = SubResource("CompressedTexture2D_ep32e")
+region = Rect2(32, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pu2o3"]
+atlas = SubResource("CompressedTexture2D_ep32e")
+region = Rect2(32, 8, 8, 8)
+
+[node name="ScoreCounter" type="HBoxContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 0
+script = ExtResource("1_v1o25")
+
+[node name="Digit0" type="TextureRect" parent="."]
+layout_mode = 2
+texture = SubResource("AtlasTexture_f43bp")
+stretch_mode = 5
+
+[node name="Digit1" type="TextureRect" parent="."]
+layout_mode = 2
+texture = SubResource("AtlasTexture_kry78")
+stretch_mode = 5
+
+[node name="Digit2" type="TextureRect" parent="."]
+layout_mode = 2
+texture = SubResource("AtlasTexture_lqfp5")
+stretch_mode = 5
+
+[node name="Digit3" type="TextureRect" parent="."]
+layout_mode = 2
+texture = SubResource("AtlasTexture_2qpgf")
+stretch_mode = 5
+
+[node name="Digit4" type="TextureRect" parent="."]
+layout_mode = 2
+texture = SubResource("AtlasTexture_vbwnf")
+stretch_mode = 5
+
+[node name="Digit5" type="TextureRect" parent="."]
+layout_mode = 2
+texture = SubResource("AtlasTexture_3wgod")
+stretch_mode = 5
+
+[node name="Digit6" type="TextureRect" parent="."]
+layout_mode = 2
+texture = SubResource("AtlasTexture_quku1")
+stretch_mode = 5
+
+[node name="Digit7" type="TextureRect" parent="."]
+layout_mode = 2
+texture = SubResource("AtlasTexture_pu2o3")
+stretch_mode = 5

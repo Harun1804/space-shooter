@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://c1x41pjnqdgrf"]
+[gd_scene load_steps=8 format=3 uid="uid://c1x41pjnqdgrf"]
 
 [ext_resource type="Texture2D" uid="uid://dfb8y1bc1lni7" path="res://Mini Pixel Pack 3/Space_BG (2 frames) (64 x 64).png" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://sgft8sfoqgdf" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://c67vv8iw3a5d5" path="res://scenes/player.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://dwwo08o1uwcek" path="res://scenes/ui.tscn" id="4_jyhfs"]
 
 [sub_resource type="Animation" id="Animation_sugp2"]
 length = 0.001
@@ -52,9 +53,16 @@ centered = false
 region_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("2_0wfyh")]
+maxShield = 20
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_jyhfs")
 }
 autoplay = "scroll"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("4_jyhfs")]
+
+[connection signal="shieldChanged" from="Player" to="CanvasLayer/UI" method="updateShield"]
