@@ -1,7 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://c1x41pjnqdgrf"]
+[gd_scene load_steps=7 format=3 uid="uid://c1x41pjnqdgrf"]
 
 [ext_resource type="Texture2D" uid="uid://dfb8y1bc1lni7" path="res://Mini Pixel Pack 3/Space_BG (2 frames) (64 x 64).png" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://sgft8sfoqgdf" path="res://scripts/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://c67vv8iw3a5d5" path="res://scenes/player.tscn" id="2_0wfyh"]
+
+[sub_resource type="Animation" id="Animation_sugp2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(0, 0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_0wfyh"]
 resource_name = "scroll"
@@ -20,21 +36,6 @@ tracks/0/keys = {
 "values": [Rect2(0, 0, 240, 320), Rect2(0, 64, 240, 320)]
 }
 
-[sub_resource type="Animation" id="Animation_sugp2"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Background:region_rect")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Rect2(0, 0, 0, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_jyhfs"]
 _data = {
 &"RESET": SubResource("Animation_sugp2"),
@@ -42,6 +43,7 @@ _data = {
 }
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_sugp2")
 
 [node name="Background" type="Sprite2D" parent="."]
 texture_repeat = 2
